@@ -1,29 +1,68 @@
 {
   "servers": {
-    "description": "服务器地址列表（多个地址请用英文逗号分隔）",
+    "description": "服务器地址列表",
     "type": "string",
-    "default": "mc.example.com, be.example.com:19132"
+    "default": "mc.example.com, be.example.com:19132",
+    "hint": "多个地址请用英文逗号分隔。Java 版默认端口 25565，基岩版常见 19132。",
+    "obvious_hint": true
+  },
+  "brand_name": {
+    "description": "品牌名称",
+    "type": "string",
+    "default": "无名小服",
+    "hint": "显示在卡片左上角的小字标题",
+    "obvious_hint": true
   },
   "api_priority": {
-    "description": "API 优先级列表（越靠前优先级越高，失败自动切换下一个）",
+    "description": "API 优先级",
     "type": "string",
     "default": "minebbs,mcstatus,mcsrvstat",
-    "hint": "内置可选：minebbs, mcstatus, mcsrvstat。可加入自定义API的URL（需带{ip}和{port}）"
+    "hint": "靠前的优先使用，失败自动切下一个。内置：minebbs / mcstatus / mcsrvstat；也可填自定义 URL（需含 {ip} 和 {port}）。多个用英文逗号分隔。"
   },
-  "query_timeout": { "description": "单次API查询超时时间（秒）", "type": "int", "default": 10 },
-  "default_port": { "description": "默认端口", "type": "int", "default": 25565 },
-  "auto_detect": { "description": "自动检测服务器类型", "type": "bool", "default": true },
-  "show_motd": { "description": "是否显示 MOTD", "type": "bool", "default": true },
-  "show_players": { "description": "是否显示在线玩家数", "type": "bool", "default": true },
-  "show_version": { "description": "是否显示版本信息", "type": "bool", "default": true },
-  "show_delay": { "description": "是否显示延迟", "type": "bool", "default": true },
-  "card_width": { "description": "图片宽度（像素）", "type": "int", "default": 900 },
-  "font_size": { "description": "基础字体大小", "type": "int", "default": 28 },
+  "query_timeout": {
+    "description": "单次 API 查询超时（秒）",
+    "type": "int",
+    "default": 10
+  },
+  "default_port": {
+    "description": "默认端口",
+    "type": "int",
+    "default": 25565
+  },
   "theme": {
     "description": "主题模式",
     "type": "string",
     "options": ["auto", "light", "dark"],
     "default": "dark"
   },
-  "brand_name": { "description": "顶部显示的服务器品牌名称", "type": "string", "default": "无名小服" }
+  "card_width": {
+    "description": "图片宽度（像素）",
+    "type": "int",
+    "default": 900
+  },
+  "font_size": {
+    "description": "基础字号",
+    "type": "int",
+    "default": 28
+  },
+  "show_motd": {
+    "description": "显示 MOTD",
+    "type": "bool",
+    "default": true
+  },
+  "show_players": {
+    "description": "显示在线玩家数",
+    "type": "bool",
+    "default": true
+  },
+  "show_version": {
+    "description": "显示版本信息",
+    "type": "bool",
+    "default": true
+  },
+  "show_delay": {
+    "description": "显示延迟",
+    "type": "bool",
+    "default": true
+  }
 }
