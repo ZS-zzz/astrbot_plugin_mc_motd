@@ -1,7 +1,8 @@
 name: astrbot_plugin_mc_motd
 display_name: "MC服务器监控面板"
 desc: "查询 Minecraft 服务器状态并返回毛玻璃风格监控面板图片（支持多服务器、彩色 MOTD、多API故障转移）"
-version: "v1.6.0"
+version: "1.6.0"
+author: "ZS-zzz"
 repo: "https://github.com/ZS-zzz/astrbot_plugin_mc_motd"
 license: "MIT"
-requirements: requirements.txt
+requirements: "requirements.txt"
